@@ -326,6 +326,14 @@ h6 {
   font-size: clamp(24px, 3.12vw, 60px);
 }
 
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
 .backdrop-title {
   position: relative;
   z-index: 2;
@@ -752,14 +760,6 @@ input[type="number"] {
   margin-bottom: 52px;
 }
 
-.join-us-form-subtitle {
-  font-size: 20px;
-  line-height: 1.65;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-light);
-}
-
 .join-us-form-body {
   display: flex;
   justify-content: center;
@@ -802,8 +802,35 @@ input[type="number"] {
 .location-description:not(:last-child) {
   margin-bottom: 37px;
 }
-
 /* Section Location Style end */
+
+/* Section Family Style start */
+.family {
+  background-color: var(--color-dark-alternate);
+}
+
+.family-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+  padding-top: 132px;
+  padding-bottom: 62px;
+  text-align: center;
+}
+
+.family-body {
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  scroll-snap-type: x mandatory; /* Добавит поведение слайдера*/
+  overflow-x: scroll; /* Добавит возможность скролить по гризонтали*/
+}
+
+.family-image {
+  scroll-snap-align: start; /* Для скрола */
+}
+/* Section Family Style end */
 
 /* MEDIA style start */
 @media (max-width: 1919px) {
@@ -864,6 +891,10 @@ input[type="number"] {
   .location {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .family-image {
+    height: 360px;
   }
 }
 
@@ -937,7 +968,7 @@ input[type="number"] {
     margin-bottom: 40px;
   }
 
-  .join-us-form-subtitle {
+  .section-description {
     font-size: 16px;
   }
 
@@ -953,6 +984,19 @@ input[type="number"] {
 
   .location-description:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .family-image {
+    height: 180px;
+  }
+
+  .family-header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .family-body {
+    column-gap: 12px;
   }
 }
 /* MEDIA style end */
