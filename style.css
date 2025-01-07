@@ -288,6 +288,11 @@ p:not([class]):not(:last-child) {
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -767,6 +772,39 @@ input[type="number"] {
 
 /* Section Join-us Style end */
 
+/* Section Location Style start */
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+  height: auto;
+}
+
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
+
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location-description {
+  max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+  margin-bottom: 37px;
+}
+
+/* Section Location Style end */
+
 /* MEDIA style start */
 @media (max-width: 1919px) {
   .motivation-card-image {
@@ -821,6 +859,11 @@ input[type="number"] {
 
   .join-us-title:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -902,6 +945,14 @@ input[type="number"] {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+  }
+
+  .location-body {
+    padding-block: 40px;
+  }
+
+  .location-description:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 /* MEDIA style end */
